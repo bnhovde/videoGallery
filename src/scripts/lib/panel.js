@@ -47,6 +47,9 @@ ns.panel = (function(){
      * @params movieId (object)        - JSON data
      */
     const show = function(movieId){
+        
+        ns.videoPlayer.stop();
+        
         const movie = ns.videoData.get(movieId);
         const { id, description, title, images: { cover }, meta: { releaseYear } } = movie;
 

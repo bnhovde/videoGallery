@@ -146,6 +146,9 @@ ns.panel = function () {
      * @params movieId (object)        - JSON data
      */
     var show = function show(movieId) {
+
+        ns.videoPlayer.stop();
+
         var movie = ns.videoData.get(movieId);
         var id = movie.id;
         var description = movie.description;
@@ -497,12 +500,22 @@ ns.videoPlayer = function () {
         settings.DOM.container.setAttribute('data-video-state', 'ready');
     };
 
+    /**
+     * stop
+     * 
+     * stops currently playing movie
+     */
+    var stop = function stop() {
+        settings.DOM.video.pause();
+    };
+
     //////////////////
 
     return {
         init: init,
         show: show,
-        loadVideo: loadVideo
+        loadVideo: loadVideo,
+        stop: stop
     };
 }();
 'use strict';

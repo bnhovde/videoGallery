@@ -120,12 +120,22 @@ ns.videoPlayer = (function(){
         settings.DOM.container.setAttribute('data-video-state', 'ready');
     }
     
+    /**
+     * stop
+     * 
+     * stops currently playing movie
+     */
+    const stop = function(){
+        settings.DOM.video.pause();
+    }
+    
     //////////////////
     
     return {
         init,
         show,
-        loadVideo
+        loadVideo,
+        stop
     }
     
 }());
