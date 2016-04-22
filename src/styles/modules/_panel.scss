@@ -34,14 +34,20 @@
 
     &__inner {
         position: relative;
+        height: 100%;
         color: white;
     }
 
     // ----- Title----- // 
 
     &__title {
-        font-size: 3rem;
-        padding-top: 30px;
+        font-size: 2rem;
+        padding-top: 20px;
+        
+        @include breakpoint('child-bear'){
+            font-size: 3rem;
+            padding-top: 30px;
+        }
     }
 
     // ----- meta----- // 
@@ -60,14 +66,20 @@
 
     &__play {
         position: absolute;
-        top: -50px;
-        right: 100px;
+        bottom: 20px;
+        right: 10px;
         height: 100px;
         width: 100px;
         border: 0;
         padding: 0;
         background-color: #00BCD4;
         border-radius: 50%;
+        transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) .1s;
+        
+        @include breakpoint('child-bear'){
+            top: -50px;
+            right: 100px;
+        }
         
         // Icon
         > svg {
@@ -80,14 +92,20 @@
 
     &__close {
         position: absolute;
-        top: -35px;
-        right: 20px;
+        bottom: 20px;
+        right: 120px;
         height: 70px;
         width: 70px;
         border: 0;
         padding: 0;
         background-color: #009688;
         border-radius: 50%;
+        transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) .1s;
+        
+        @include breakpoint('child-bear'){
+            right: 20px;
+            top: -35px;
+        }
         
         // Icon
         > svg {
@@ -99,10 +117,12 @@
     
     // ----- Shared button styles ----- // 
     
-    button {
+    &__play,
+    &__close {
         box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-        transition: all 0.3s ease;
+        transform: scale(.3);
         
+        [data-panel-state="visible"] & { transform: scale(1); }
         
         // Super performant css box shadow
         // -> http://tobiasahlin.com/blog/how-to-animate-box-shadow/
@@ -129,6 +149,7 @@
             
             outline: 0;
         }
+
     }
 
 
@@ -142,7 +163,12 @@
 
     &[data-panel-state="visible"] {
         opacity: 1;
-        top: 40%;
+        top: 60px;
+        z-index: 30;
+        
+        @include breakpoint('child-bear'){
+            top: 40%;
+        }
     }
     
 

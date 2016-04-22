@@ -58,14 +58,14 @@ ns.videoGallery = (function(){
         const { id, title, images: { cover }, meta: { releaseYear } } = movie;
         
         let markup = `
-            <button class="video-cover" data-video-id="${id}">
-                <div class="video-cover__cover" style="background-image: url('assets/images/covers/${cover}');">
-                    <div class="video-cover__overlay">
+            <button class="cover" data-video-id="${id}">
+                <div class="cover__image" style="background-image: url('assets/images/covers/${cover}');">
+                    <div class="cover__overlay">
                         <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>
                     </div>
                 </div>
-                <h4 class="video-cover__title">${title}</h4>
-                <p class="video-cover__year">${releaseYear}</p>
+                <h4 class="cover__title">${title}</h4>
+                <p class="cover__year">${releaseYear}</p>
             </button>`;
         
         return markup;

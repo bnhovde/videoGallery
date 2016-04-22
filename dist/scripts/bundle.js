@@ -350,7 +350,7 @@ ns.videoGallery = function () {
         var releaseYear = movie.meta.releaseYear;
 
 
-        var markup = '\n            <button class="video-cover" data-video-id="' + id + '">\n                <div class="video-cover__cover" style="background-image: url(\'assets/images/covers/' + cover + '\');">\n                    <div class="video-cover__overlay">\n                        <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>\n                    </div>\n                </div>\n                <h4 class="video-cover__title">' + title + '</h4>\n                <p class="video-cover__year">' + releaseYear + '</p>\n            </button>';
+        var markup = '\n            <button class="cover" data-video-id="' + id + '">\n                <div class="cover__image" style="background-image: url(\'assets/images/covers/' + cover + '\');">\n                    <div class="cover__overlay">\n                        <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>\n                    </div>\n                </div>\n                <h4 class="cover__title">' + title + '</h4>\n                <p class="cover__year">' + releaseYear + '</p>\n            </button>';
 
         return markup;
     };
@@ -554,7 +554,7 @@ var ns = ns || {};
     DOM.coverContainer.addEventListener('click', function (e) {
 
         var clickedEl = e.target;
-        var button = ns.helpers.closestClass(clickedEl, 'video-cover');
+        var button = ns.helpers.closestClass(clickedEl, 'cover');
 
         if (button) {
             var videoId = button.getAttribute('data-video-id');
