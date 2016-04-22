@@ -13,6 +13,7 @@ Below is a list of required improvements in order of importance:
 
 * Cross-browser compatability
 * Better mobile experience
+* Custom videoplayer theme
 * Asset optimisation
 * Responsive images
 * Accessability review
