@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="wf-loading" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+        <title>Video Gallery Demo</title>
+        
+        <link rel="stylesheet" href="/dist/styles/main.css">
+        
+    </head>
+    <body class="page">
+        
+        <!-- SVG EMBEDS -->
+        <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol id="icon-eye" viewBox="0 0 32 32">
+                <title>eye</title>
+                <path class="path1" d="M16 4c-8.836 0-16 11.844-16 11.844s7.164 12.156 16 12.156 16-12.156 16-12.156-7.164-11.844-16-11.844zM16 24c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8zM12 16c0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4s-4-1.791-4-4z"></path>
+            </symbol>
+            <symbol id="icon-play" viewBox="0 0 24 32">
+                <title>play</title>
+                <path class="path1" d="M0 0l24 16-24 16z"></path>
+            </symbol>
+            <symbol id="icon-x" viewBox="0 0 32 32">
+                <title>x</title>
+                <path class="path1" d="M30 24.398l-8.406-8.398 8.406-8.398-5.602-5.602-8.398 8.402-8.402-8.402-5.598 5.602 8.398 8.398-8.398 8.398 5.598 5.602 8.402-8.402 8.398 8.402z"></path>
+            </symbol>
+        </svg>
+        
+        <main class="main">
+            
+            <div class="video-box -l-container" id="video-container">
+                <div class="video-box__video -l-aspect">
+                    <video class="-l-aspect__embed" id="video" controls poster="/assets/images/transparent.png">
+                        <source id="mp4video" src="" type="video/mp4" />
+                        <source id="webmvideo" src="" type="video/webm" />
+                        <source id="ogvvideo" src="" type="video/ogv" />
+                        Your browser does not support the <code>video</code> element.
+                    </video>
+                    <div class="video-box__loader">
+                        <img src="/assets/images/loader.svg" width="64" height="64">
+                    </div>
+                </div>
+                <div class="video-box__details">
+                    <h3 class="video-box__title">
+                        <span id="video-title">Video Title</span>
+                        <span id="video-year">(YEAR)</span>
+                    </h3>
+                    <p id="video-directors" class="video-box__meta">Directors: </p>
+                    <p id="video-actors" class="video-box__meta">Actors: </p>
+                </div>
+            </div>
+            
+            <section class="video-gallery -l-container" id="cover-container">
+                
+                <button class="video-cover">
+                    <div class="video-cover__cover">
+                        <div class="video-cover__overlay">
+                            <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>
+                        </div>
+                    </div>
+                    <h4 class="video-cover__title">Video title</h4>
+                    <p class="video-cover__year">YEAR</p>
+                </button>
+                
+                <button class="video-cover">
+                    <div class="video-cover__cover">
+                        <div class="video-cover__overlay">
+                            <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>
+                        </div>
+                    </div>
+                    <h4 class="video-cover__title">Video title</h4>
+                    <p class="video-cover__year">YEAR</p>
+                </button>
+                
+                <button class="video-cover">
+                    <div class="video-cover__cover">
+                        <div class="video-cover__overlay">
+                            <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>
+                        </div>
+                    </div>
+                    <h4 class="video-cover__title">Video title</h4>
+                    <p class="video-cover__year">YEAR</p>
+                </button>
+                
+                <button class="video-cover">
+                    <div class="video-cover__cover">
+                        <div class="video-cover__overlay">
+                            <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>
+                        </div>
+                    </div>
+                    <h4 class="video-cover__title">Video title</h4>
+                    <p class="video-cover__year">YEAR</p>
+                </button>
+                
+            </section>
+            
+        </main>
+        
+        <div class="panel" id="panel" data-panel-state="hidden">
+            <div class="panel__inner -l-container">
+                <button href="#close" class="panel__play" id="panel-play"><svg class="icon icon-play"><use xlink:href="#icon-play"></use></svg></button>
+                <button href="#close" class="panel__close" id="panel-close"><svg class="icon icon-x"><use xlink:href="#icon-x"></use></svg></button>
+                
+                <h3 id="panel-title" class="panel__title">Video title</h3>
+                <p id="panel-year" class="panel__year">YEAR</p>
+                <p id="panel-directors" class="panel__meta">Directors: </p>
+                <p id="panel-actors" class="panel__meta">Actors: </p>
+                <p class="panel__description" id="panel-description">description</p>
+
+            </div>
+        </div>
+    
+        <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Scripts -->
+        <script src="/dist/scripts/fetch.js"></script>
+        <script src="/dist/scripts/bundle.js"></script>
+        
+        <!-- Typekit -->
+        <script type="text/javascript">
+            WebFontConfig = {
+                google: { families: [ 'Open+Sans:400,300:latin' ] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                var s = document.getElementsByTagName('script')[0];
+                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                s.parentNode.insertBefore(wf, s);
+            })(); 
+        </script>
+        
+        
+    </body>
+</html>

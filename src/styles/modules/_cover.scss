@@ -1,0 +1,139 @@
+// *************************************
+//
+//   Video cover
+//   -> Shows a thumbnail of the video
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.video-cover {
+
+    // -------------------------------------
+    //   Variables
+    // -------------------------------------
+
+    $col-fg: gray;
+    $col-bg: #DADADA;
+    
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    text-align: left;
+    
+
+    // -------------------------------------
+    //   Elements
+    // -------------------------------------
+
+
+    // ----- Video cover ----- // 
+
+    &__cover {
+        position: relative;
+        width: 141px;
+        height: 199px;
+        background-color: $col-bg;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+        
+        // Super performant css box shadow
+        // -> http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.3s ease;
+        }
+    }
+
+
+    // ----- Video title ----- // 
+
+    &__title {
+        margin: 5px 5px 0 5px;
+        color: #848484;
+        font-size: 0.9rem;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+    }
+
+    // ----- Video year ----- // 
+
+    &__year {
+        font-size: 0.7rem;
+        margin: 0 5px 5px 5px;
+        color: gray;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    // ----- Video overlay ----- // 
+
+    &__overlay {
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.23);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        
+        // Icon
+        > svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+            transform: translateY(10px);
+            transition: transform 0.5s ease;
+        }
+    }
+
+    // -------------------------------------
+    //   Effects
+    // -------------------------------------
+
+    &:hover,
+    &:focus {
+        
+        // Lift up cover
+        .video-cover__cover {
+            transform: translateY(-5px);
+        
+            &:after {
+                opacity: 1;
+            }
+        }
+        
+        // Show overlay
+        .video-cover__overlay {
+            opacity: 1;
+            
+            // Lift up eye
+            > svg { transform: translateY(0px); }
+        }
+        
+        outline: 0;
+        
+    }
+    
+    
+
+    // -------------------------------------
+    //   Variations
+    // -------------------------------------
+
+
+    // ----- Variation description ----- // 
+
+    &--variation {}
+
+}

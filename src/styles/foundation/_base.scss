@@ -1,0 +1,134 @@
+// *************************************
+//
+//   Base-level tags
+//   -> All font related styling -
+//   -> generated with gridlover.net
+//
+// *************************************
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+body {
+    font-size: $base-font-size / 16 * 1em;
+    line-height: $base-font-size * 1.5 / $base-font-size;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sanitation */
+hr {
+    border: 1px solid;
+    margin: -1px 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+b, strong, em, small, code {
+    line-height: 1;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+
+sub {
+    top: 0.4em;
+}
+
+a,
+abbr,
+address,
+article,
+aside,
+b,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+u,
+ul,
+var {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}

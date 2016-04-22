@@ -1,0 +1,45 @@
+// *************************************
+//
+//   SCSS Imports for Video Gallery
+//
+// *************************************
+
+@import 
+
+// -------------------------------------
+//   CORE - Should not be modified
+// -------------------------------------
+
+'core/normalise',
+'core/print',
+
+// -------------------------------------
+//   MIXINS
+// -------------------------------------
+
+'mixins/breakpoints',
+
+// -------------------------------------
+//   FOUNDATION
+// -------------------------------------
+
+'foundation/settings',
+'foundation/base',
+
+
+// -------------------------------------
+//   MODULES 
+// -------------------------------------
+
+'modules/_container',
+'modules/_panel',
+'modules/_cover',
+'modules/_gallery',
+'modules/_aspect',
+'modules/_video-box'
+
+
+
+
+
+;

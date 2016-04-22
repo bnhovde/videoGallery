@@ -1,0 +1,23 @@
+// *************************************
+//
+//   Video gallery
+//   -> Contains video cards
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.video-gallery {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    @include breakpoint('teen-bear'){
+        justify-content: space-between;
+    }
+
+}
