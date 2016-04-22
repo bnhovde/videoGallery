@@ -11,6 +11,7 @@ This videoplayer was built within a very short timeframe.
 
 Below is a list of required improvements in order of importance:
 
+* Cross-browser compatability
 * Better mobile experience
 * Asset optimisation
 * Responsive images
