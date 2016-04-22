@@ -50,7 +50,6 @@ var ns = ns || {};
 
         };
         
-        
         /**
         * @name _hasClass
         * @desc Checks if element has class, returns true if so
@@ -64,7 +63,6 @@ var ns = ns || {};
                 return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
             }
         }
-        
         
         /**
         * @name getQueryVariable

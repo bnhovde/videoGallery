@@ -18,7 +18,7 @@ var ns = ns || {};
 	ns.panel.init();
     
     // Load videodata from API
-    fetch('/api/movies.json')
+    fetch('api/movies.json')
         .then(function(response) {
             return response.json()
         }).then(function(json) {
@@ -41,7 +41,6 @@ var ns = ns || {};
             ns.videoPlayer.show(videoId);
             ns.panel.show(videoId);
         }
-        
     });
 
 

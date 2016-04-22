@@ -59,7 +59,7 @@ ns.videoGallery = (function(){
         
         let markup = `
             <button class="video-cover" data-video-id="${id}">
-                <div class="video-cover__cover" style="background-image: url('/assets/images/covers/${cover}');">
+                <div class="video-cover__cover" style="background-image: url('assets/images/covers/${cover}');">
                     <div class="video-cover__overlay">
                         <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>
                     </div>

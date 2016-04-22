@@ -347,7 +347,7 @@ ns.videoGallery = function () {
         var releaseYear = movie.meta.releaseYear;
 
 
-        var markup = '\n            <button class="video-cover" data-video-id="' + id + '">\n                <div class="video-cover__cover" style="background-image: url(\'/assets/images/covers/' + cover + '\');">\n                    <div class="video-cover__overlay">\n                        <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>\n                    </div>\n                </div>\n                <h4 class="video-cover__title">' + title + '</h4>\n                <p class="video-cover__year">' + releaseYear + '</p>\n            </button>';
+        var markup = '\n            <button class="video-cover" data-video-id="' + id + '">\n                <div class="video-cover__cover" style="background-image: url(\'assets/images/covers/' + cover + '\');">\n                    <div class="video-cover__overlay">\n                        <svg class="icon-eye"><use xlink:href="#icon-eye"></use></svg>\n                    </div>\n                </div>\n                <h4 class="video-cover__title">' + title + '</h4>\n                <p class="video-cover__year">' + releaseYear + '</p>\n            </button>';
 
         return markup;
     };
@@ -439,7 +439,7 @@ ns.videoPlayer = function () {
         settings.DOM.actors.textContent = 'Actors: ' + actors;
         settings.DOM.directors.textContent = 'Directors: ' + directors;
         settings.DOM.year.textContent = '(' + releaseYear + ')';
-        settings.DOM.video.style.backgroundImage = 'url("/assets/images/' + placeholder + '")';
+        settings.DOM.video.style.backgroundImage = 'url("assets/images/' + placeholder + '")';
 
         // Update the video sources
         updateSources(streams);
@@ -527,7 +527,7 @@ var ns = ns || {};
     ns.panel.init();
 
     // Load videodata from API
-    fetch('/api/movies.json').then(function (response) {
+    fetch('api/movies.json').then(function (response) {
         return response.json();
     }).then(function (json) {
         ns.videoData.set(json);

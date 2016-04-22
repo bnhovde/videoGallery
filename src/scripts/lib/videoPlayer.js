@@ -64,7 +64,7 @@ ns.videoPlayer = (function(){
         settings.DOM.actors.textContent = `Actors: ${actors}`;
         settings.DOM.directors.textContent = `Directors: ${directors}`;
         settings.DOM.year.textContent = `(${releaseYear})`;
-        settings.DOM.video.style.backgroundImage = `url("/assets/images/${placeholder}")`;
+        settings.DOM.video.style.backgroundImage = `url("assets/images/${placeholder}")`;
         
         // Update the video sources
         updateSources(streams);
@@ -119,7 +119,6 @@ ns.videoPlayer = (function(){
         settings.DOM.video.play();
         settings.DOM.container.setAttribute('data-video-state', 'ready');
     }
-
     
     //////////////////
     

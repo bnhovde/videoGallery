@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bnhovde/video-gallery.git"
+    "url": "git+https://github.com/bnhovde/videoGallery.git"
   },
   "author": "Bård N Hovde",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bnhovde/video-gallery/issues"
+    "url": "https://github.com/bnhovde/videoGallery/issues"
   },
-  "homepage": "https://github.com/bnhovde/video-gallery#readme",
+  "homepage": "https://github.com/bnhovde/videoGallery#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-cli": "^6.7.5",
