@@ -34,7 +34,7 @@ var ns = ns || {};
     DOM.coverContainer.addEventListener('click', function(e){
         
         var clickedEl = e.target;
-        var button = ns.helpers.closestClass(clickedEl, 'cover');
+        var button = ns.helpers.getClosest(clickedEl, '.cover');
         
         if (button) {
             var videoId = button.getAttribute('data-video-id');
